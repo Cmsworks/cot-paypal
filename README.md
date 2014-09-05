@@ -1,7 +1,7 @@
 cot-paypal
 ==========
 
-Платежный плагин для платежного модуля Payments на Cotonti 
+Платежный плагин PayPal для платежного модуля Payments на Cotonti 
 
 Описание и инструкция по установке: http://cmsworks.ru/catalog/plugins/paypal
 
