@@ -43,7 +43,8 @@ if ($response != "VERIFIED" || $status_data['receiver_email'] != $cfg['plugin'][
 
 if (!empty($pid) && $pinfo = cot_payments_payinfo($pid))
 {
-	if($status_data['mc_gross'] == $pinfo['pay_summ']*$cfg['plugin']['paypalbilling']['rate']  && $status_data['mc_currency'] == $cfg['plugin']['paypalbilling']['currency'])
+	$amount = number_format($pinfo['pay_summ']*$cfg['plugin']['paypalbilling']['rate'], 2);
+	if($status_data['mc_gross'] == $amount  && $status_data['mc_currency'] == $cfg['plugin']['paypalbilling']['currency'])
 	{
 		cot_payments_updatestatus($pid, 'paid');
 	}	
