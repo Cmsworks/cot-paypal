@@ -33,7 +33,7 @@ if (empty($m))
 		$merchant_id = $cfg['plugin']['paypalbilling']['merchant_id'];
 		$signature = $cfg['plugin']['paypalbilling']['signature'];
 		
-		$amount = number_format($pinfo['pay_summ']*$cfg['plugin']['paypalbilling']['rate'], 2);
+		$amount = number_format($pinfo['pay_summ']*$cfg['plugin']['paypalbilling']['rate'], 2, '.', '');
 		
 		$url = (!$cfg['plugin']['paypalbilling']['testmode']) ? 'https://www.paypal.com/cgi-bin/webscr' : 'https://www.sandbox.paypal.com/cgi-bin/webscr';
 		
